@@ -1,0 +1,19 @@
+{
+  "result": [
+    {
+      "latitude": "59.909114",
+      "name": "KPMG Oslo",
+      "longitude": "10.754677"
+    },
+    {
+      "latitude": "58.146108",
+      "name": "KPMG Kristiansand",
+      "longitude": "7.985444"
+    },
+    {
+      "latitude": "60.369498",
+      "name": "KPMG Bergen",
+      "longitude": "5.341519"
+    }
+  ]
+}

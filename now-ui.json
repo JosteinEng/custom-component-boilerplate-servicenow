@@ -1,0 +1,68 @@
+{
+  "components": {
+    "x-1560996-map-data-resource": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": ["global.core", "global.landing-page"],
+        "label": "Map Data Resource Component",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "Map using data from data resource",
+        "category": "primitives"
+      },
+      "properties": [
+        {
+          "name": "kpmgOfficesList",
+          "label": "KPMG Offices",
+          "description": "Bind the KPMG offices to the map",
+          "defaultValue": [],
+          "fieldType": "array",
+          "items": {
+            "type": "object",
+            "properties": {}
+          }
+        }
+      ],
+      "actions": [
+        {
+          "name": "MARKER_NAME_DISPATCHED",
+          "label": "Marker Name Dispatched",
+          "description": "Dispatches the selected marker name",
+          "action": "MARKER_NAME_DISPATCHED",
+          "payload": [
+            {
+              "name": "value",
+              "type": "string",
+              "description": "The name of the selected marker"
+            }
+          ]
+        }
+      ]
+    },
+    "x-1560996-map-api": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": ["global.core", "global.landing-page"],
+        "label": "Map API Component",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "Map using data from API",
+        "category": "primitives"
+      },
+      "actions": [
+        {
+          "name": "MARKER_NAME_DISPATCHED",
+          "label": "Marker Name Dispatched",
+          "description": "Dispatches the selected marker name",
+          "action": "MARKER_NAME_DISPATCHED",
+          "payload": [
+            {
+              "name": "value",
+              "type": "string",
+              "description": "The name of the selected marker"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "scopeName": "x_1560996_boiler_0"
+}
