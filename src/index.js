@@ -1,1 +1,4 @@
-import './x-1560996-boiler-plate';
+// HER MÅ DERE IMPORTERE ALLE DERES KOMPONENTER OG DATA RESSURSER FOR AT DE SKAL REGISTRERES I SYSTEMET
+
+import "./x-1560996-map-api";
+import "./x-1560996-map-data-resource";
