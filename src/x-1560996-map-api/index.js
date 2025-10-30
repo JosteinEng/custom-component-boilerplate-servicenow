@@ -54,7 +54,7 @@ createCustomElement("x-1560996-map-api", {
 		//Her lager vi FETCH_KPMG_OFFICES som en HTTP effekt som henter data fra tabellen
 		//Dette er basert på dispatchen over.
 		FETCH_KPMG_OFFICES: createHttpEffect(
-			"/api/now/table/x_1560996_boiler_0_markers",
+			"/api/now/table/u_kpmg_offices",
 			{
 				method: "GET",
 				queryParams: ["sysparm_query", "sysparm_fields"],
