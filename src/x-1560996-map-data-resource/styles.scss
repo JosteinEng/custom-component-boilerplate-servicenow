@@ -2,7 +2,7 @@
 
 .map-container {
   width: 100%;
-  height: 100svh;
+  height: calc(100svh - 250px);
   position: relative;
   z-index: 0;
 }

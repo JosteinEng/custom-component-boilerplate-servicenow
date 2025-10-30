@@ -1,4 +1,9 @@
+//Ignorer dette, er open source map, dere skal bruke noe eget.
+
 export function loadMap(host) {
+	//Noe som er vrient med custom components er shadowDOM
+	//Derfor må vi hente elementer inni shadowRoot
+	//Eksempel host.shadowRoot.getElementById("map")
 	const mapContainer = host.shadowRoot.getElementById("map");
 	if (!host.shadowRoot.querySelector('link[href*="leaflet.css"]')) {
 		const link = document.createElement("link");
@@ -7,7 +12,7 @@ export function loadMap(host) {
 		host.shadowRoot.appendChild(link);
 	}
 	function initMap() {
-		host._map = L.map(mapContainer).setView([59.3, 8], 8);
+		host._map = L.map(mapContainer).setView([59.3, 8], 6);
 		L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 			maxZoom: 19,
 			attribution:

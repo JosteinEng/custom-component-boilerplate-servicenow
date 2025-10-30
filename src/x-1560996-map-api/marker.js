@@ -9,22 +9,28 @@ export function addOfficeMarkersToMap(map, offices, dispatch) {
 			popupAnchor: [0, -22],
 		});
 		offices.forEach((office) => {
-			if (office.latitude && office.longitude) {
+			if (office.u_latitude && office.u_longitude) {
 				const marker = L.marker(
-					[parseFloat(office.latitude), parseFloat(office.longitude)],
+					[parseFloat(office.u_latitude), parseFloat(office.u_longitude)],
 					{
 						icon: customIcon,
 					}
 				)
 					.addTo(map)
-					.bindPopup(office.name);
+					.bindPopup(office.u_name);
 
 				marker.on("click", () => {
-					console.log("Marker clicked:", office.name);
+					console.log("Marker clicked:", office.u_name);
+					console.log("Marker clicked latitude:", office.u_latitude);
+					console.log("Marker clicked longitude:", office.u_longitude);
 					dispatch &&
-						dispatch("MARKER_NAME_DISPATCHED", {
-							value: office.name,
+						dispatch("MARKER_NAME_DISPATCHED_API", {
+							value: office.u_name,
 						});
+					console.log(
+						"MARKER_NAME_DISPATCHED_API: Properties in marker dispatch:",
+						office.u_name
+					);
 				});
 			}
 		});

@@ -12,7 +12,7 @@ export function loadMap(host) {
 		host.shadowRoot.appendChild(link);
 	}
 	function initMap() {
-		host._map = L.map(mapContainer).setView([59.3, 8], 8);
+		host._map = L.map(mapContainer).setView([59.3, 8], 6);
 		L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 			maxZoom: 19,
 			attribution:

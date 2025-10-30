@@ -15,7 +15,7 @@ const initState = {
 	mapInitialized: false,
 };
 
-const view = (state, { dispatch }) => {
+const view = ({}) => {
 	return <div id="map" className="map-container" />;
 };
 
@@ -64,12 +64,12 @@ createCustomElement("x-1560996-map-api", {
 		//Dette er eksempel på hvordan det funker
 		//Når vi faktisk får data tilbake fra API kallet så sender vi dataen til state kpmgOfficesList ved hjelp av updateState
 		//I tillegg legger vi til markører på kartet ved hjelp av addOfficeMarkersToMap funksjonen
-		FETCH_KPMG_OFFICES_SUCCESS: ({ action, updateState, host }) => {
+		FETCH_KPMG_OFFICES_SUCCESS: ({ action, updateState, host, dispatch }) => {
 			console.log("FETCH_KPMG_OFFICES_SUCCESS payload:", action.payload);
 			const kpmgOfficesList = action.payload.result || [];
 			updateState({ kpmgOfficesList });
 
-			addOfficeMarkersToMap(host._map, kpmgOfficesList);
+			addOfficeMarkersToMap(host._map, kpmgOfficesList, dispatch);
 		},
 
 		//Feilhåndtering for API kallet
