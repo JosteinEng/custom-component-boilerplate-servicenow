@@ -1,9 +1,5 @@
 # @boilerplate/boiler-plate
 
-kjør npm i for å fikse error
-
-
-
 For å pushe til Instanse bruk
 snc ui-component deploy
 

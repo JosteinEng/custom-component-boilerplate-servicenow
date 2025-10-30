@@ -4,7 +4,7 @@ import "../src/x-1560996-map-data-resource";
 const el = document.createElement("DIV");
 document.body.appendChild(el);
 
-el.innerHTML = `		
+el.innerHTML = `
 	<x-1560996-map-data-resource></x-1560996-map-data-resource>
 `;
 

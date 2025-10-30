@@ -24,10 +24,10 @@
       ],
       "actions": [
         {
-          "name": "MARKER_NAME_DISPATCHED",
+          "name": "MARKER_NAME_DISPATCHED_DR",
           "label": "Marker Name Dispatched",
           "description": "Dispatches the selected marker name",
-          "action": "MARKER_NAME_DISPATCHED",
+          "action": "MARKER_NAME_DISPATCHED_DR",
           "payload": [
             {
               "name": "value",
@@ -49,10 +49,10 @@
       },
       "actions": [
         {
-          "name": "MARKER_NAME_DISPATCHED",
+          "name": "MARKER_NAME_DISPATCHED_API",
           "label": "Marker Name Dispatched",
           "description": "Dispatches the selected marker name",
-          "action": "MARKER_NAME_DISPATCHED",
+          "action": "MARKER_NAME_DISPATCHED_API",
           "payload": [
             {
               "name": "value",
