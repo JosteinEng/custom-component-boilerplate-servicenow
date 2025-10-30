@@ -45,23 +45,20 @@ createCustomElement("x-1560996-map-api", {
 			//Fetcher KPMG kontorer fra tabellen via API
 			//Her kaller vi på FETCH_KPMG_OFFICES og setter query parametere for hva vi vil hente i tabellen
 			dispatch("FETCH_KPMG_OFFICES", {
-				sysparm_query: `nameISNOTEMPT^latitudeISNOTEMPT^longitudeISNOTEMPTY`,
-				sysparm_fields: "name,latitude,longitude",
+				sysparm_query: `u_nameISNOTEMPTY^u_latitudeISNOTEMPTY^u_longitudeISNOTEMPTY`,
+				sysparm_fields: "u_name,u_latitude,u_longitude",
 				sysparm_display_value: "all",
 			});
 		},
 
 		//Her lager vi FETCH_KPMG_OFFICES som en HTTP effekt som henter data fra tabellen
 		//Dette er basert på dispatchen over.
-		FETCH_KPMG_OFFICES: createHttpEffect(
-			"/api/now/table/u_kpmg_offices",
-			{
-				method: "GET",
-				queryParams: ["sysparm_query", "sysparm_fields"],
-				successActionType: "FETCH_KPMG_OFFICES_SUCCESS",
-				errorActionType: "FETCH_KPMG_OFFICES_ERROR",
-			}
-		),
+		FETCH_KPMG_OFFICES: createHttpEffect("/api/now/table/u_kpmg_offices", {
+			method: "GET",
+			queryParams: ["sysparm_query", "sysparm_fields"],
+			successActionType: "FETCH_KPMG_OFFICES_SUCCESS",
+			errorActionType: "FETCH_KPMG_OFFICES_ERROR",
+		}),
 
 		//Inni FETCH_KPMG_OFFICES har vi suksess og error handlers
 		//Dette er eksempel på hvordan det funker
